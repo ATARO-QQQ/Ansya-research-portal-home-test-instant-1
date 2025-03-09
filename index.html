@@ -551,7 +551,6 @@
 </main>
 
 <footer>
-    <p>閲覧回数: <span id="page-views">0</span></p>
     <p>現在時刻: <span id="current-time">--:--:--</span></p>
     <div class="footer-menu">
         <a href="#">最新の記事</a>
@@ -562,13 +561,6 @@
 </footer>
 
 <script>
-    // 閲覧回数のカウント
-    let pageViewCount = localStorage.getItem('pageViewCount') || 0;
-    pageViewCount++;
-    localStorage.setItem('pageViewCount', pageViewCount);
-    const pageViews = document.getElementById('page-views');
-    pageViews.textContent = pageViewCount;
-
     // 時間の更新
     const currentTimeElem = document.getElementById('current-time');
     setInterval(() => {
